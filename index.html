@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>سحوبات جمعية بناء</title>
+<meta name="color-scheme" content="dark" />
+<style>
+  :root{
+    --bg:#071f1e; --panel:rgba(243,240,230,.06); --stroke:rgba(0,168,180,.35);
+    --cream:#f3f0e6; --dim:rgba(243,240,230,.62); --teal:#00a8b4; --teal-soft:#35d4d0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; background:
+      radial-gradient(120% 70% at 50% -10%, #123c3c 0%, transparent 62%),
+      radial-gradient(90% 55% at 50% 110%, #0d2f2c 0%, transparent 62%), var(--bg);
+    color:var(--cream); font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+    display:grid; place-items:center; padding:24px;
+  }
+  main{width:min(560px,100%); text-align:center}
+  h1{margin:0 0 .3em; font-size:clamp(1.6rem,5vw,2.4rem)}
+  p{margin:0 0 2rem; color:var(--dim); line-height:1.8}
+  .routes{display:grid; gap:14px}
+  a.route{
+    display:grid; gap:.25rem; padding:1.5rem 1rem; border-radius:18px;
+    background:var(--panel); border:1px solid var(--stroke); color:var(--cream);
+    text-decoration:none; transition:transform .18s ease, background .18s ease;
+  }
+  a.route:hover{transform:translateY(-2px); background:rgba(0,168,180,.14)}
+  a.route b{font-size:1.4rem}
+  a.route span{font-size:.9rem; color:var(--teal-soft); direction:ltr; font-variant-numeric:tabular-nums}
+  footer{margin-top:2rem; font-size:.85rem; color:var(--dim)}
+  @media(min-width:560px){.routes{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+  <h1>سحوبات جمعية بناء</h1>
+  <p>احتفال اليوم الوطني ٩٦ — اختر الشاشة</p>
+  <div class="routes">
+    <a class="route" href="./women/"><b>سحب النساء</b><span>001 — 100</span></a>
+    <a class="route" href="./men/"><b>سحب الرجال</b><span>101 — 200</span></a>
+  </div>
+  <footer>كل شاشة تعمل بذاتها — اضغط الزر لبدء السحب</footer>
+</main>
+</body>
+</html>
